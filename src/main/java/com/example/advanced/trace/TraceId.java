@@ -17,7 +17,7 @@ public class TraceId {
     private String createId(){
         return UUID.randomUUID().toString().substring(0,8);
     }
-    private TraceId createNextId(){
+    public TraceId createNextId(){
         return new TraceId(id,level+1);
     }
     public boolean isFirstLevel(){
